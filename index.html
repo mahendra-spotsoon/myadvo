@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>My Title</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <meta charset="UTF-8">
+    <meta name="language" content="language">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <section class="header-section d-float">
+        <section class="header d-float">
+            I am reserved for navigation
+        </section>
+    </section>
+    <section class="main d-float">
+        <div class="wrapper">
+            <div class="question-main d-float">
+                <div class="add-ques">
+                    <i class="material-icons md-48"><span>add</span><span>Add Question</span></i>
+
+                </div>
+                <div class="question-head d-float">
+                    <ul class="tab">
+                        <li class="tablinks" onclick="openCity(event, 'tab1')" id="defaultOpen">Questions</li>
+                        <li class="tablinks" onclick="openCity(event, 'tab2')">Response</li>
+                    </ul>
+                </div>
+                <div class="tabcontent d-float " id="tab1">
+                    <div class="form-bdr d-float">
+                        <div class="wrapper-inner">
+                            <div class="form-title d-float">
+                                <div class="bdr mar-bottom">
+                                    <input type="text" value="Untitled Form" name="form_title" class="title" />
+                                </div>
+                                <div class="bdr">
+                                    <input type="text" value="" name="form_description" placeholder="Form Description" class="description" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Text-based answer start here-->
+                        <div class="question d-float">
+                            <div class="wrapper-inner">
+                                <div class="ques-inner d-float">
+                                    <div class="ques">
+                                        <div class="bdr">
+                                            <input type="text" name="question" placeholder="Question" class="form-control " />
+                                        </div>
+                                    </div>
+                                    <div class="select-category">
+                                        <div class="select">
+                                            <div class="menu"> <span class="ques-choice"><i class="material-icons md-48">format_align_left</i>Paragraph</span>
+                                                <span><i class="material-icons md-48">arrow_drop_down</i></span>
+                                            </div>
+                                            <ul class="dropdown">
+                                                <li id="choice1"><i class="material-icons md-48">format_align_left</i>Paragraph</li>
+                                                <li id="choice2"><i class="material-icons md-48">radio_button_checked</i>Multiple Choice</li>
+                                                <li id="choice3"><i class="material-icons md-48">crop_square</i>Checkboxes</li>
+                                                <li id="choice4"><i class="material-icons md-48">radio_button_unchecked</i>Yes/No</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- Text-based answer start here-->
+                                    <div class="ques-option paragraph">
+                                        <div class="option d-float radio-default">
+                                            <div class="bdr vid">
+                                                <textarea class="form-control" rows="4" placeholder="Write yor text"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Multiple choice one answer  starts here-->
+                                    <div class="ques-option mcq-mc">
+                                        <div class="option-all d-float">
+                                            <div class="option d-float radio-default">
+                                                <i class="material-icons md-48">radio_button_checked</i>
+                                                <div class="bdr vid">
+                                                    <input type="text" name="question" placeholder="Option" class="form-control f-small" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="option d-float">
+                                            <i class="material-icons md-48">radio_button_checked</i>
+                                            <div class="addnew-radio" onclick="newradiobutton(this);">
+                                                Add Other
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Multiple choice one answer  starts here-->
+
+                                    <!-- Multiple choice multiple answers starts here-->
+                                    <div class="ques-option mc-ma">
+                                        <div class=" d-float multiple-ch-n-ans">
+                                            <div class="option d-float radio-default">
+                                                <i class="material-icons md-48">crop_square</i>
+                                                <div class="bdr vid">
+                                                    <input type="text" name="question" placeholder="Option" class="form-control f-small" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="option d-float">
+                                            <i class="material-icons md-48">crop_square</i>
+                                            <div class="addnew-checkbox" onclick="newcheckboxbutton(this);">
+                                                Add Other
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Multiple choice multiple answers ends here-->
+
+                                    <!-- Binary Yes/No answer Starts here-->
+                                    <div class="ques-option mcq-one">
+                                        <div class="option d-float radio-default">
+                                            <i class="material-icons md-48">radio_button_unchecked</i>
+                                            <div class="one-choice vid">
+                                                <input type="text" name="question" placeholder="Yes" class="form-control f-small" readonly/>
+                                            </div>
+                                        </div>
+                                        <div class="option d-float radio-default">
+                                            <i class="material-icons md-48">radio_button_unchecked</i>
+                                            <div class="one-choice vid">
+                                                <input type="text" name="question" placeholder="No" class="form-control f-small" readonly/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Binary Yes/No answer ends here-->
+                                </div>
+                                <div class="footer d-float">
+                                <i class="material-icons md-48 remove-ques" title="Delete">delete</i>
+                            </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="submit">
+                        <input type="submit" value="Submit">
+                    </div>
+                </div>
+                <div class="tabcontent d-float " id="tab2">
+                    <div class="wrapper-inner">
+                        <div class="form-output d-float">
+                            <div class="form-group d-float">
+                                <div class="label-ques d-float">It is a long established fact that a reader will be distracted by the readable content of a page ?</div>
+                                <div class="bdr">
+                                    <textarea class="form-control" row="4">Write your answer </textarea>
+                                </div>
+                            </div>
+                            <div class="form-group d-float">
+                                <div class="label-ques d-float">It is a long established fact that a reader will be distracted by the readable content of a page ?</div>
+                                <div class="form-control d-float">
+                                    <input type="radio" name="option" value="Option 1" checked id="r1">
+                                    <label for="r1">Option 1</label>
+                                    <br>
+                                    <input type="radio" name="option" value="Option 2" id="r2">
+                                    <label for="r2">Option 2</label>
+                                    <br>
+                                    <input type="radio" name="option" value="Option 3" id="r3">
+                                    <label for="r3">Option 3</label>
+                                    <br>
+                                    <input type="radio" name="option" value="Option 4" id="r4">
+                                    <label for="r4">Option 4</label>
+                                </div>
+                            </div>
+                            <div class="form-group d-float">
+                                <div class="label-ques d-float">It is a long established fact that a reader will be distracted by the readable content of a page ?</div>
+                                <div class="form-control d-float">
+                                    <input type="checkbox" name="option" value="Option 1" checked id="ch1">
+                                    <label for="ch1">Option 1</label>
+                                    <br>
+                                    <input type="checkbox" name="option" value="Option 2" id="ch2">
+                                    <label for="ch2">Option 2</label>
+                                    <br>
+                                    <input type="checkbox" name="option" value="Option 3" id="ch3">
+                                    <label for="ch3">Option 3</label>
+                                    <br>
+                                    <input type="checkbox" name="option" value="Option 4" id="ch4">
+                                    <label for="ch4">Option 4</label>
+                                </div>
+                            </div>
+                            <div class="form-group d-float">
+                                <div class="label-ques d-float">It is a long established fact that a reader will be distracted by the readable content of a page ?</div>
+                                <div class="form-control d-float">
+                                    <input type="radio" name="option" value="Yes" checked id="y">
+                                    <label for="y">Yes</label>
+                                    <br>
+                                    <input type="radio" name="option" value="No" id="n">
+                                    <label for="n">No</label>
+                                </div>
+                            </div>
+                            <div class="submit nobdr">
+                                <input type="submit" value="Submit">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
